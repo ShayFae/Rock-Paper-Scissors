@@ -1,0 +1,69 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <div class= "buttons">
+        <button class="btn" id="rock" onclick="playerPlay()" onclick="playRound()" name="Rock">Rock</button>
+        <button class="btn" id="paper" onclick="playerPlay()" name="Paper">Paper</button>
+        <button class="btn" id="scissors" onclick="playerPlay()" name="Scissors">Scissors</button>
+    </div>
+
+    
+
+<script>
+const button = document.querySelectorAll('button');
+button.forEach((button) => button.addEventListener("Click", playerPlay));
+
+
+
+const pick = ["Rock", "Paper", "Scissors"];
+       
+function computerPlay() {
+    /*const work ="Rock";
+    return work;*/
+    const random = Math.floor(Math.random() * pick.length);
+       console.log(pick[random]);
+       return alert('Computer plays' + pick);
+    }
+
+    console.log(computerPlay);
+
+function playRound() {
+    /*const please = "Rock";
+    return please;*/
+const play = "";
+if (confirm("Testing")) {
+    play = "No";
+} else {
+    play = "Yes"
+}
+}
+console.log(playRound);
+
+/*const computerSelection = computerPlay();
+const playerSelection = playRound();
+
+function playerPlay(playerSelection, computerSelection) {
+if (playerSelection && computerSelecton === "Rock")
+    return alert(playerSelection += computerSelection);
+/*} else if (computerSelecton === "Paper" && playerSelection === "Rock") {
+    return alert('Paper beats rock Computer wins');
+} else if (computerSelecton === "Rock" && playerSelection === "Scissors") {
+    return alert('Rock beats scissors Computer wins');
+} else if (computerSelecton === "Scissors" && playerSelection === "Paper") {
+    return alert('Scissors beats paper Computer wins');
+}
+
+console.log(playerSelection, computerSelection);*/
+
+</script>        
+
+</body>
+
+</html>-->
+

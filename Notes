@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game</title>
+</head>
+<h1></h1>
+<button onclick="computerPlay()"> Click Here</button>
+<button onclick="player()"> Click Here</button> 
+<button onclick="playRound()"> LETS PLAY</button>
+<Button onclick="Rock()"> Rock</Button>
+<Button onclick="Paper()"> Paper</Button>
+<Button onclick="Scissors()"> Scissors</Button>
+
+<body>
+    <script>
+       const pick = ["Rock", "Paper", "Scissors"];
+       const playerSelection = "Rock";
+       const computerSelection = "Paper";
+
+        function Rock() {
+            const a1 = "Rock";
+            console.log(a1);
+        }
+
+        function Paper() {
+            const a2 = "Paper";
+            console.log(a2);
+        } 
+
+        function Scissors() {
+            const a3 = "Scissors";
+            console.log(a3);
+        }
+
+
+        
+
+
+
+       function computerPlay() {
+       const random = Math.floor(Math.random() * pick.length);
+       console.log(pick[random]);
+       return;
+        }
+       
+       /*function playRound(computerSelection, playerSelection) {
+       if (playerSelection = Rock()) {
+           greeting = "You Win";
+       } else if (playerSelection = Paper()) {
+           greeting = "You Lose! Paper beats Rock";
+       } else {
+           greeting = "You Lose! Paper beats Rock";
+       }
+       console.log(greeting);
+       return;
+       }*/
+       
+       
+       /*console.log(playRound(computerSelection, playerSelection));
+       
+        /*function player() {
+            if (computerPlay() = "Rock") {
+                greeting = "You win";
+            } else {
+                greeting = "You Lose";
+            }
+        }*/
+
+        
+        
+        
+        
+       
+       
+        
+    
+
+       
+       
+       
+       
+
+   
+
+    </script>
+
+
+
+
+</body>
+
+
+</html> 
+*console.log(playRound(playerSelection, computerSelection))*/
+
+/*const rock = document.getElementByID('rock');
+rock = function playerPlay(e) {
+const rock = "Rock";
+}
+const paper = document.getElementByID('paper');
+paper = function playerPlay(e) {
+const paper = "Paper";
+}
+const scissors = document.getElementByID('sicssors');
+scissors = function playerPlay(e) {
+    const scissors = "Scissors";
+    console.log(e)
+
+}*/
+
+
+
+/*function playRound() {
+ /*const choice1 = document.getElementByID('rock');
+ const choice2 = document.getElementByID('paper');
+ const choice3 = document.getElementByID('sicssors');*/
+   /*if (choice = document.getElementByID('rock')) { 
+       return "Rock";    
+    } else if (choice = document.getElementByID('paper')) {
+        return "Paper";
+    } else (choice = document.getElementByID('scissors')) 
+        return "Scissors";*/
+
+    /*const choice1 = document.getElementByID("rock");
+    if (choice1.addEventListener)
+        choice.addEvenetListener("click", playRound, false);
+        else if (choice.attachEvent)
+            choice.attachEvent('onclick', playRound);
+
+    const Rock = "Rock";          
+    
+}
+    console.log(playRound);*/
+
+
+    /*if (playerSelection === 'Rock' && computerSelection === 'Paper') {
+        return "Paper beats rock Computer wins!";
+    } else if (playerSelection === 'Paper'  && computerSelection === 'Scissors') {
+        return "Scissors beats paper Computer wins!";
+    } else if (playerSelection === 'Scissors' && computerSelection === 'Rock') { 
+        return "Rock beats scissors Computer wins!";
+    } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
+        return "Paper beats rock Player wins!";
+    } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
+        return "Scissors beats paper Player wins!";
+    } else (playerSelection === 'Rock' && computerSelection === 'Scissors') 
+        return(computerSelection + playerSelection + "Rock beats scissors Player wins!");  
+         
+    }*/
+
+
+
+/*btn.forEach(btn => btn.addEventListener('click', playerPlay));
+windows.addEventListener('click', playerPlay);*/

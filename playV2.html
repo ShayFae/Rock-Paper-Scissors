@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <div class= "buttons">
+        <button class="btn" id="Rock" onclick="playRound()" onclick="computerPlay()" onclick="playerOne()" value="Rock">Rock</button>
+        <button class="btn" id="Paper" onclick="playRound()" onclick="computerPlay()" onclick="playerTwo()" value="Paper">Paper</button>
+        <button class="btn" id="Scissors" onclick="playRound()" onclick="computerPlay()" onclick="playerThree()" value="Scissors">Scissors</button>
+        <button class="btn" id="restart" onclick="restart()">Restart</button>
+    </div>
+
+   <p id="demo"></p> 
+
+<script>
+const button = document.querySelectorAll('button');
+button.forEach((button) => button.addEventListener("Click", playRound, computerPlay, playerOne, playerTwo, playerThree));
+
+function restart() {
+    location.reload();
+}
+
+const pick = ["Rock", "Paper", "Scissors"];
+const playerSelection = playerOne() || playerTwo() || playerThree;
+/*const playOne = playerOne();
+const playTwo = playerTwo();
+const playThree = playerThree();*/ 
+
+const computerSelection = computerPlay();
+
+function computerPlay() {
+    const random = Math.floor(Math.random() * pick.length);
+       console.log(pick);
+       return (pick[random]);
+       /*if (pick[random] === "Rock" && playerSelection === one) {
+           return alert('Tie');
+       } else if (pick[random] === "Rock" && playerSelection === three) {
+           return alert('Rock beats Scissors you win');
+       } else if (pick[random] === "Paper" && playerSelection === one) {
+           return alert('Paper beats Rock you win');
+       } else if (pick[random] === "Scissors" && playerSelection === two) 
+           return alert('Scissors beats Paper you win');
+      
+    }*/
+    }
+    console.log(computerPlay);
+
+function playRound() {
+    if (computerSelection === "Rock" && playerSelection === "Rock") {
+           return alert('Tie');
+       } else if (computerSelection === "Rock" && playerSelection === "Scissors") {
+           return alert('Rock beats Scissors you lose');
+       } else if (computerSelection === "Paper" && playerSelection === "Rock") {
+           return alert('Paper beats Rock you lose');
+       } else if (computerSelection === "Scissors" && playerSelection === "Paper") {
+           return alert('Scissors beats Paper you lose');
+       } else if (computerSelection === "Scissors" && playerSelection === "Rock") {
+           return alert('Rock beats Scissors you win');
+       } else if (computerSelection === "Rock" && playTerSelection === "Paper") {
+           return alert('Paper beats Rock you win');
+       } else if (computerSelection === "Paper" && playerSelection === "Scissors") {
+           return alert('Scissors beats Paper you win');
+       } else {
+           return alert('ERROR');
+        }
+    }
+        console.log(computerSelection, playerSelection);
+
+ function playerOne() {
+     const a = "Rock";
+     return a;   
+ }
+   console.log(playerOne);
+
+   function playerTwo() {
+     const a = "Paper";
+     return a;   
+ }
+   console.log(playerTwo);
+
+   function playerThree() {
+     const a = "Scissors";
+     return a;   
+ }
+   console.log(playerThree);
+
+/*function playerPlay() {
+    if(a = document.getElementById("Rock")) {
+        return a = "Rock";
+    } else if (b = document.getElementById("Paper")) {
+        return b = "Paper";
+    } else if (c = document.getElementById("Scissors")) {
+        return c = "Scissors";
+    }
+}   
+    
+  console.log(playerPlay);*/
+
+
+
+
+
+    
+   
+
+
+
+
+
+</script>        
+
+</body>
+
+</html>
