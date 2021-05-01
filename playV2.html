@@ -9,8 +9,8 @@
 
     <div class= "buttons">
         <button class="btn" id="Rock" onclick="playRound()" onclick="computerPlay()" onclick="playerOne()" value="Rock">Rock</button>
-        <button class="btn" id="Paper" onclick="playRound()" onclick="computerPlay()" onclick="playerTwo()" value="Paper">Paper</button>
-        <button class="btn" id="Scissors" onclick="playRound()" onclick="computerPlay()" onclick="playerThree()" value="Scissors">Scissors</button>
+        <button class="btn" id="Paper" onclick="playRound2()" onclick="computerPlay()" onclick="playerTwo()" value="Paper">Paper</button>
+        <button class="btn" id="Scissors" onclick="playRound3()" onclick="computerPlay()" onclick="playerThree()" value="Scissors">Scissors</button>
         <button class="btn" id="restart" onclick="restart()">Restart</button>
     </div>
 
@@ -25,50 +25,69 @@ function restart() {
 }
 
 const pick = ["Rock", "Paper", "Scissors"];
-const playerSelection = playerOne() || playerTwo() || playerThree;
-/*const playOne = playerOne();
-const playTwo = playerTwo();
-const playThree = playerThree();*/ 
+const playerSelection1 = playerOne(); 
+const playerSelection2 = playerTwo(); 
+const playerSelection3 = playerThree();
 
 const computerSelection = computerPlay();
 
 function computerPlay() {
     const random = Math.floor(Math.random() * pick.length);
        console.log(pick);
-       return (pick[random]);
-       /*if (pick[random] === "Rock" && playerSelection === one) {
-           return alert('Tie');
-       } else if (pick[random] === "Rock" && playerSelection === three) {
-           return alert('Rock beats Scissors you win');
-       } else if (pick[random] === "Paper" && playerSelection === one) {
-           return alert('Paper beats Rock you win');
-       } else if (pick[random] === "Scissors" && playerSelection === two) 
-           return alert('Scissors beats Paper you win');
-      
-    }*/
+       return (pick[random]);   
     }
     console.log(computerPlay);
 
 function playRound() {
-    if (computerSelection === "Rock" && playerSelection === "Rock") {
+    if (computerSelection === "Rock" && playerSelection1 === "Rock") {
            return alert('Tie');
-       } else if (computerSelection === "Rock" && playerSelection === "Scissors") {
+       } else if (computerSelection === "Rock" && playerSelection3 === "Scissors") {
            return alert('Rock beats Scissors you lose');
-       } else if (computerSelection === "Paper" && playerSelection === "Rock") {
+       } else if (computerSelection === "Paper" && playerSelection1 === "Rock") {
            return alert('Paper beats Rock you lose');
-       } else if (computerSelection === "Scissors" && playerSelection === "Paper") {
-           return alert('Scissors beats Paper you lose');
-       } else if (computerSelection === "Scissors" && playerSelection === "Rock") {
+       } else if (computerSelection === "Scissors" && playerSelection1 === "Rock") {
            return alert('Rock beats Scissors you win');
-       } else if (computerSelection === "Rock" && playTerSelection === "Paper") {
+       } else if (computerSelection === "Rock" && playerSelection2 === "Paper") {
            return alert('Paper beats Rock you win');
-       } else if (computerSelection === "Paper" && playerSelection === "Scissors") {
+       } else {
+           return alert('ERROR');
+        }
+    }
+        console.log(computerSelection, playerSelection1);
+
+    function playRound2() {
+        if (computerSelection === "Paper" && playerSelection2 === "Paper") {
+           return alert('Tie');
+       } else if (computerSelection === "Paper" && playerSelection1 === "Rock") {
+           return alert('Paper beats Rock you lose');
+       } else if (computerSelection === "Scissors" && playerSelection2 === "Paper") {
+           return alert('Scissors beats Paper you lose')
+       } else if (computerSelection === "Rock" && playerSelection2 === "Paper") {
+           return alert('Paper beats Rock you win');  
+       } else if (computerSelection === "Paper" && playerSelection3 === "Scissors") {
            return alert('Scissors beats Paper you win');
        } else {
            return alert('ERROR');
         }
     }
-        console.log(computerSelection, playerSelection);
+        console.log(computerSelection, playerSelection2);
+    
+        function playRound3() {
+        if (computerSelection === "Scissors" && playerSelection3 === "Scissors") {
+           return alert('Tie');
+        } else if (computerSelection === "Rock" && playerSelection3 === "Scissors") {
+           return alert('Rock beats Scissors you lose');
+        } else if (computerSelection === "Scissors" && playerSelection2 === "Paper") {
+           return alert('Scissors beats Paper you lose');
+        } else if (computerSelection === "Scissors" && playerSelection1 === "Rock") {
+           return alert('Rock beats Scissors you win');
+        } else if (computerSelection === "Paper" && playerSelection3 === "Scissors") {
+           return alert('Scissors beats Paper you win');
+        } else {
+           return alert('ERROR');
+        }
+    }
+        console.log(computerSelection, playerSelection3);
 
  function playerOne() {
      const a = "Rock";
@@ -77,40 +96,16 @@ function playRound() {
    console.log(playerOne);
 
    function playerTwo() {
-     const a = "Paper";
-     return a;   
+     const b = "Paper";
+     return b;   
  }
    console.log(playerTwo);
 
    function playerThree() {
-     const a = "Scissors";
-     return a;   
+     const c = "Scissors";
+     return c;   
  }
-   console.log(playerThree);
-
-/*function playerPlay() {
-    if(a = document.getElementById("Rock")) {
-        return a = "Rock";
-    } else if (b = document.getElementById("Paper")) {
-        return b = "Paper";
-    } else if (c = document.getElementById("Scissors")) {
-        return c = "Scissors";
-    }
-}   
-    
-  console.log(playerPlay);*/
-
-
-
-
-
-    
-   
-
-
-
-
-
+   console.log(playerOne, playerTwo, playerThree);
 </script>        
 
 </body>

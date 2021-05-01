@@ -22,7 +22,10 @@
     color: black;
     border: .4rem black;
     background: rgba(0,0,0,0.4);
-    position: center;
+    position: bottom;
+    width: 15rem;
+    margin: 1rem;
+    justify-content: center;
 }
 
 #Rock {
